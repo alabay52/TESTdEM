@@ -18,8 +18,8 @@ namespace TESTdEM
 
         private void AddBtm_Click(object sender, RoutedEventArgs e)
         {
-            AddEditWindows addEditWindows = new AddEditWindows();
-            if (addEditWindows.ShowDialog() == true)
+            AddWindow addWindow = new AddWindow();
+            if (addWindow.ShowDialog() == true)
             {
                 LoadData();
             }
@@ -46,7 +46,7 @@ namespace TESTdEM
                 }
                 catch
                 {
-                    MessageBox.Show("Невозможно удалить компанию");
+                    MessageBox.Show("Невозможно удалить тариф");
                 }
 
             }
@@ -54,16 +54,19 @@ namespace TESTdEM
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
+
             Tariff selectedTariff = TariffLv.SelectedItem as Tariff;
             if (selectedTariff != null)
             {
-                AddEditWindows editWindows = new AddEditWindows(selectedTariff);
-                editWindows.ShowDialog();
+                EditWindow editWindow = new EditWindow(selectedTariff);
+                editWindow.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Сначала выберите компанию");
+                MessageBox.Show("Выберите тариф");
             }
+
+
         }
     }
 }

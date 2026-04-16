@@ -1,11 +1,11 @@
-﻿<Window x:Class="TESTdEM.Views.Windows.AddEditWindows"
+﻿<Window x:Class="TESTdEM.Views.Windows.EditWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TESTdEM.Views.Windows"
         mc:Ignorable="d"
-            Title="Добавление\Редактирование" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+                Title="Редактирование" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
@@ -15,7 +15,7 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="20" />
             <RowDefinition Height="50" />
-            
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
@@ -28,7 +28,7 @@
         <TextBox Name="PriceTb" Grid.Row="2" Grid.Column="2" Text="{Binding Price}"/>
         <TextBlock  Grid.Row="4" Text="Описание:"/>
         <TextBox Name="DescriptionTb" Grid.Row="4" Grid.Column="2" Text="{Binding Description}" />
-        <Button Grid.Row="6" Grid.Column="2" Name="AddBtn" Content="Добавить" Click="AddBtn_Click" />
+      
         <Button Grid.Row="6" Grid.Column="2" Name="Editbtn" Content="Редактировать" Click="Editbtn_Click" />
     </Grid>
 </Window>
