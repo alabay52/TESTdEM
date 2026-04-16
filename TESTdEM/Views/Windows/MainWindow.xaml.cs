@@ -30,9 +30,10 @@ namespace TESTdEM
         }
         private void RemoveBtn_Click(object sender, RoutedEventArgs e)
         {
+            Tariff selectedTariff = TariffLv.SelectedItem as Tariff;
             if (TariffLv.SelectedItem != null)
             {
-                Tariff selectedTariff = TariffLv.SelectedItem as Tariff;
+
 
 
 
@@ -60,7 +61,7 @@ namespace TESTdEM
             {
                 EditWindow editWindow = new EditWindow(selectedTariff);
                 editWindow.ShowDialog();
-                App.context.SaveChanges();
+
             }
             else
             {
