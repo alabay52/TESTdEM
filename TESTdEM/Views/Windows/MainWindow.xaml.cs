@@ -60,6 +60,7 @@ namespace TESTdEM
             {
                 EditWindow editWindow = new EditWindow(selectedTariff);
                 editWindow.ShowDialog();
+                App.context.SaveChanges();
             }
             else
             {
