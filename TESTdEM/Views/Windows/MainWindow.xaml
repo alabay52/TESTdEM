@@ -1,0 +1,36 @@
+﻿<Window x:Class="TESTdEM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TESTdEM"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+               
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Height="50" Width="200" Content="Добавить" Name="AddBtm" Click="AddBtm_Click"/>
+            <Button Grid.Column="1" Height="50" Width="200" Content="Удалить " Name="RemoveBtn" Click="RemoveBtn_Click"/>
+            <Button Grid.Column="2" Height="50" Width="200" Content="Редактировать" Name="EditBtn" Click="EditBtn_Click"/>
+            
+        </Grid>
+        <ListView Name="TariffLv" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name }"/>
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
